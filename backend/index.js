@@ -1,8 +1,9 @@
+require('dotenv').config();
 const express = require("express")
 // const app = express()
 const { app, server } = require("./socket/socket.js")
+const PORT = process.env.PORT || 8000;
 
-require('dotenv').config();
 const cors = require("cors")
 const cookieParser = require("cookie-parser")
 const path = require("path")
@@ -17,7 +18,6 @@ const userRoutes = require("./routes/userRoutes")
 const postRoutes = require("./routes/postRoutes")
 const messageRoutes = require("./routes/messageRoutes")
 
-const PORT = process.env.PORT || 5000;
 
 // MongoDb Connection...
 const Connection = require("./config/dbConnection");
