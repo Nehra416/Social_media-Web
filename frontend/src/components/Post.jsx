@@ -41,7 +41,7 @@ const Post = ({ post }) => {
     const handleLikeOrDislike = async () => {
         try {
             const action = liked ? 'dislike' : 'like';
-            const res = await axios.get(`http://localhost:8000/post/${action}/${post._id}`, { withCredentials: true })
+            const res = await axios.get(`https://social-media-web-9lmz.onrender.com/post/${action}/${post._id}`, { withCredentials: true })
 
             if (res.data.success) {
                 // *********
@@ -68,7 +68,7 @@ const Post = ({ post }) => {
     const PostComment = async () => {
         try {
             console.log(text)
-            const res = await axios.post(`http://localhost:8000/post/comment/${post._id}`, { text }, {
+            const res = await axios.post(`https://social-media-web-9lmz.onrender.com/post/comment/${post._id}`, { text }, {
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -94,7 +94,7 @@ const Post = ({ post }) => {
     const deltePostHandle = async () => {
         
         try {
-            const res = await axios.delete(`http://localhost:8000/post/deletePost/${post?._id}`, { withCredentials: true })
+            const res = await axios.delete(`https://social-media-web-9lmz.onrender.com/post/deletePost/${post?._id}`, { withCredentials: true })
             if (res.data.message) {
                 const updatedPost = posts.filter((postItem) => postItem._id !== post._id)
                 dispatch(setPosts(updatedPost))
@@ -112,7 +112,7 @@ const Post = ({ post }) => {
             // {console.log(user?.bookmark.includes(post._id))}
             console.log("like value is ", book)
 
-            const res = await axios.get(`http://localhost:8000/post//bookmarkPost/${post._id}`, { withCredentials: true })
+            const res = await axios.get(`https://social-media-web-9lmz.onrender.com/post//bookmarkPost/${post._id}`, { withCredentials: true })
             if (res.data.success) {
                 toast.success(res.data.message);
                 console.log("user is : ", user)

@@ -12,7 +12,7 @@ const useGetUserProfile = (userId) => {
     useEffect(() => {
         const getUserProfile = async () => {
             try {
-                const res = await axios.get(`http://localhost:8000/user/profile/${userId}`, { withCredentials: true })
+                const res = await axios.get(`https://social-media-web-9lmz.onrender.com/user/profile/${userId}`, { withCredentials: true })
                 // console.log("res is : ", res)
                 if (res.data.success) {
                     dispatch(setUserProfile(res.data.userProfile))

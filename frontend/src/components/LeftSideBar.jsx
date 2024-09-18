@@ -47,7 +47,7 @@ const LeftSideBar = () => {
 
     const handleLogOut = async () => {
         try {
-            const res = await axios.get("http://localhost:8000/user/signout")
+            const res = await axios.get("https://social-media-web-9lmz.onrender.com/user/signout")
             if (res.data.success) {
                 navigate("/signin")
                 toast.success(res.data.message)

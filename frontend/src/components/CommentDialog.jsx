@@ -38,7 +38,7 @@ const CommentDialog = ({ openComment, setOpenComment }) => {
 
     const PostComment = async () => {
         try {
-            const res = await axios.post(`http://localhost:8000/post/comment/${selectedPost._id}`, { text }, {
+            const res = await axios.post(`https://social-media-web-9lmz.onrender.com/post/comment/${selectedPost._id}`, { text }, {
                 headers: {
                     "Content-Type": "application/json" // not neccessary...
                 },

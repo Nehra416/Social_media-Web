@@ -13,7 +13,7 @@ const useGetAllMessage = () => {
     useEffect(() => {
         const GetAllMessage = async () => {
             try {
-                const res = await axios.get(`http://localhost:8000/message/all/${selectedUser._id}`, { withCredentials: true })
+                const res = await axios.get(`https://social-media-web-9lmz.onrender.com/message/all/${selectedUser._id}`, { withCredentials: true })
                 console.log("res of get all message is ", res)
                 if (res.data.success) {
                     console.log("message from server:", res.data.message)

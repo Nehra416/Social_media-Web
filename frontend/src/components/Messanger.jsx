@@ -19,7 +19,7 @@ const Messanger = () => {
     const sendMessageHandler = async (receiverId) => {
         console.log("send msj is : ", textMessage)
         try {
-            const res = await axios.post(`http://localhost:8000/message/send/${receiverId}`, { textMessage }, {
+            const res = await axios.post(`https://social-media-web-9lmz.onrender.com/message/send/${receiverId}`, { textMessage }, {
                 headers: {
                     "Content-Type": "application/json",
                 },
@@ -61,7 +61,7 @@ const Messanger = () => {
                                     <div onClick={() => dispatch(setSelectedUser(user))} className='flex justify-between items-center px-3 py-3 hover:bg-gray-50 cursor-pointer'>
                                         <div className='flex gap-3 items-center'>
                                             {
-                                                // user.profilePicture ? <img src={`http://localhost:8000/uploads/${user.profilePicture}`} alt="DP" className="bg-gray-100 w-8 h-8 rounded-full cursor-pointer" />
+                                                // user.profilePicture ? <img src={`https://social-media-web-9lmz.onrender.com/uploads/${user.profilePicture}`} alt="DP" className="bg-gray-100 w-8 h-8 rounded-full cursor-pointer" />
                                                 // :
                                                 <img src={profile} alt="DP" className="bg-gray-100 w-11 h-11 rounded-full cursor-pointer" />
                                             }

@@ -11,7 +11,7 @@ const useGetAllPost = () => {
     useEffect(() => {
         const GetAllPost = async () => {
             try {
-                const res = await axios.get("http://localhost:8000/post/all", { withCredentials: true })
+                const res = await axios.get("https://social-media-web-9lmz.onrender.com/post/all", { withCredentials: true })
                 // console.log(res)
                 if (res.data.success) {
                     console.log("data is", res.data.posts)

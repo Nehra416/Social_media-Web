@@ -69,7 +69,7 @@ const EditProfile = () => {
 
         try {
             setLoading(true)
-            const res = await axios.post(`http://localhost:8000/user/profile/edit`, data, {
+            const res = await axios.post(`https://social-media-web-9lmz.onrender.com/user/profile/edit`, data, {
                 headers: {
                     'Content-Type': 'application/json',
                 },

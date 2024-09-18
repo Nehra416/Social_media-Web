@@ -36,7 +36,7 @@ const Profile = () => {
           <Avatar >
             {
               userProfile?.profilePicture ?
-                // <AvatarImage src={`http://localhost:8000/uploads/${userProfile?.profilePicture}`} alt='ProfilePicture' className='md:w-36 w-24 md:h-36 h-24 rounded-full  border-4' />
+                // <AvatarImage src={`https://social-media-web-9lmz.onrender.com/uploads/${userProfile?.profilePicture}`} alt='ProfilePicture' className='md:w-36 w-24 md:h-36 h-24 rounded-full  border-4' />
                 <AvatarImage src={userProfile?.profilePicture} alt='ProfilePicture' className='md:w-36 w-24 md:h-36 h-24 rounded-full  border-4' />
                 :
                 <AvatarImage src={profile} alt='ProfilePicture' className='md:w-36 w-20  md:h-36 h-20 rounded-full  border-4' />

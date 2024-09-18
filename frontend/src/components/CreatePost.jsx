@@ -67,7 +67,7 @@ const CreatePost = ({ openCreatePost, setOpenCreatePost }) => {
         setLoading(true)
 
         try {
-            const res = await axios.post("http://localhost:8000/post/add", formData, {
+            const res = await axios.post("https://social-media-web-9lmz.onrender.com/post/add", formData, {
                 headers: {
                     'Content-Type': 'application/json',
                 },

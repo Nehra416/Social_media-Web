@@ -11,7 +11,7 @@ const useGetSuggestedUser = () => {
     useEffect(() => {
         const getSuggestedUser = async () => {
             try {
-                const res = await axios.get("http://localhost:8000/user/suggested", { withCredentials: true })
+                const res = await axios.get("https://social-media-web-9lmz.onrender.com/user/suggested", { withCredentials: true })
                 // console.log(res)
                 if (res.data.success) {
                     dispatch(setSuggestedUser(res.data.users))

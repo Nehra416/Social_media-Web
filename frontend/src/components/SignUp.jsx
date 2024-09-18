@@ -29,7 +29,7 @@ const SignUp = () => {
         try {
             setLoading(true);
 
-            const res = await axios.post("http://localhost:8000/user/signup", input, { withCredentials: true })
+            const res = await axios.post("https://social-media-web-9lmz.onrender.com/user/signup", input, { withCredentials: true })
             // console.log("response is : ", res)
 
             if (res.data.success) {

@@ -5,7 +5,7 @@ const app = express()
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:5153',
+        origin: process.env.URL,
         methods: ['GET', 'POST']
     }
 });
@@ -32,7 +32,7 @@ io.on('connection', (socket) => {
 })
 
 const getRecieverSocketId = (receiverId) => {
-    return userSocketMap[receiverId] 
+    return userSocketMap[receiverId]
     // return the socket id of the user jise hame msj bhejna h...
 }
 
